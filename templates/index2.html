@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xillionaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Scrolling Ticker Section -->
+    <div class="scrolling-ticker">
+        <ul>
+            {% for ticker in ticker_data %}
+                <li>{{ ticker }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Header Section -->
+    <h1>Indicators</h1>
+
+    <div class="indicators-section">
+        <!-- RSI Section -->
+        <div class="rsi-section">
+            <table class="rsi-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">Relative Strength Index (RSI)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Inserting the styled DataFrame HTML for RSI -->
+                    {{ styled_df_html | safe }}
+                </tbody>
+            </table>
+            <pre>{{ rsi_output }}</pre>
+            <button id="refresh-button">Refresh RSI</button>
+        </div>
+
+        <!-- MACD Section -->
+        <div class="macd-section">
+            <h2>Moving Average Convergence Divergence (MACD)</h2>
+            <!-- Inserting the styled MACD DataFrame HTML -->
+            {{ styled_macd_df_html | safe }}
+            <pre> {{ macd_output }} </pre>
+            <button id="refresh-button">Refresh MACD</button>
+        </div>
+    </div>
+    
+    <!-- Including JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

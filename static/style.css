@@ -1,0 +1,139 @@
+/* style.css */
+.scrolling-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color:bisque;
+}
+.scrolling-ticker ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    animation: scrolling 20s linear infinite; /* Adjust the animation speed as needed */
+}
+.scrolling-ticker li {
+    display: inline;
+    margin-right: 20px; /* Adjust the spacing between prices */
+}
+@keyframes scrolling {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+h1 {
+    color: rgb(238, 223, 223);
+    text-align: center;
+    background-color: #224a74; /* Blue color */
+    padding: 20px; /* add padding around title */
+    margin-top: 0%; /* -3.5px originally */
+}
+
+pre {
+    font-family: monospace; /* use same font for uniformity */
+    margin-left: 10%; /* -50px originally */
+    padding: 10px;
+}
+
+/* style.css */
+
+.rsi-section{
+    text-align: center;
+}
+
+.high-rsi {
+    background-color: black;
+    color: white;
+}
+
+.rsi-table th[colspan], table td[colspan] {
+    text-align: center; /* Center the content in cells with colspan */
+}
+
+.rsi-table {
+    width: 20%; /* Adjust the width of the table */
+    margin: 0 auto;
+    top: 20%;
+    border: 2px solid #224a74; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#refresh-button {
+    display: inline-block;
+    transform: translate(0, -50%); /* Center the button vertically */
+}
+.macd-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.macd-table {
+    width: 30%;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.macd-table th {
+    background-color: #224a74;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.macd-table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.macd-table td.positive {
+    background-color: green;
+    color: white;
+}
+
+.macd-table td.negative {
+    background-color: red;
+    color: white;
+}
+
+#T_2ffed_ {
+    margin: 0 auto;
+    border: 2px solid #224a74; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+}
+  
+.styled-macd-table {
+    margin: 0 auto;
+}
+
+/* Style the table headers */
+.styled-macd-table th {
+    background-color: #f5f5f5;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Style the table cells in the data rows */
+.dataframe {
+    background-color: #ffffff;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+/* Apply styles to alternating rows for better readability */
+.dataframe {
+    background-color: #f0f0f0;
+}
+
+
+.macd-section th[colspan="2"] {
+    text-align: center;
+ }
+
+
+
+
